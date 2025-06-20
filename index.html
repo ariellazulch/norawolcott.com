@@ -3,86 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nora's Website</title>
+    <title>About - Nora Wolcott</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', sans-serif;
+            cursor: url('cursor.png') 0 0, auto;  /* Custom cursor as default */
+            font-family: 'Palatino Linotype', 'Baskerville Old Face', Baskerville, 'Times New Roman', serif;
             max-width: 800px;
-            margin: 50px auto;
+            margin: 60px auto;
             line-height: 1.8;
             color: #333;
-            background-color: #fafafa;
-            padding: 20px;
+            background-image: url('background.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            padding: 30px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 240, 0.8);
+            padding: 30px 80px;
+            border-radius: 8px;
+        }
+        .site-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .site-title a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.7em;
+            font-weight: normal;
+            cursor: url('cursor.png') 0 0, pointer;  /* Custom cursor for interactive elements */
+        }
+        .site-title a:hover {
+            color: #7b6c94;
+        }
+        .nav-container {
+            background-color: rgba(255, 255, 240, 0.72);  /* Reduced from 0.8 to 0.72 */
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-tabs li a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 530;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: color 0.3s ease;
+            cursor: url('cursor.png') 0 0, pointer;
+        }
+        .nav-tabs li a:hover {
+            background-color: transparent;
+        }
+        /* Custom hover colors for each nav item */
+        .nav-tabs li a[href="aboutme.html"]:hover {
+            color: #a12d2e;  /* Dark red */
+        }
+        .nav-tabs li a[href="research.html"]:hover {
+            color: #da691d;  /* Orange */
+        }
+        .nav-tabs li a[href="publications.html"]:hover {
+            color: #DAA520;  /* Back to original yellow */
+        }
+        .nav-tabs li a[href="contact.html"]:hover {
+            color: #01714d;  /* Green */
+        }
+        .nav-tabs li a[href="NoraWolcott_CV.pdf"]:hover {
+            color: #0366b9;  /* Blue */
+        }
+        .nav-tabs li a.active {
+            background-color: transparent;
+            color: inherit;
         }
         h1 {
             text-align: center;
             font-size: 2em;
             color: #2c3e50;
+            font-weight: normal;
+        }
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 30px auto;
+        }
+        .profile-text {
+            margin-top: 30px;
         }
         p {
             font-size: 1.2em;
             text-align: justify;
         }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Tighter clickable areas for other elements */
+        a, button, input[type="submit"] {
+            padding: 2px 4px;
+            cursor: url('cursor.png') 0 0, pointer;  /* Custom cursor for interactive elements */
         }
-
-        /* New styles for publications */
-        .publications {
-            margin-top: 40px;
-        }
-
-        .publications h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .publication-item {
-            margin-bottom: 20px;
-            padding-left: 2em;
-            text-indent: -2em;
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        .publication-item a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .publication-item a:hover {
-            text-decoration: underline;
+        /* Exception for site title to maintain its spacing */
+        .site-title a {
+            padding: 0;
+            cursor: url('cursor.png') 0 0, pointer;  /* Custom cursor for interactive elements */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>About Nora</h1>
-        <p>Nora received a B.S. in Cellular and Molecular Biology and a B.A. in Music Performance from the George Washington University, and joined the Goard Lab in 2020 as a graduate student in the Molecular, Cellular, and Developmental Biology PhD program.</p>
-        <p>While in D.C., she worked at the National Institutes of Health studying the neural circuitry underlying feeding behavior. She is excited to continue investigating circuit-level dynamics in the context of memory and spatial coding.</p>
-        <p>While not in lab, Nora enjoys long walks on the beach and trying to find ways to use her music degree.</p>
+        <h1 class="site-title">
+            <a href="aboutme.html">Nora Wolcott, PhD</a>
+        </h1>
+        <nav class="nav-container">
+            <ul class="nav-tabs">
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="NoraWolcott_CV.pdf" target="_blank">CV</a></li>
+            </ul>
+        </nav>
 
-        <div class="publications">
-            <h2>Publications</h2>
-            <div class="publication-item">
-                <a href="https://doi.org/10.1016/j.neuron.2023.03.014">Gonzalez, W. G.*, Kapoor, V.*, Wiechert, M. T.*, Phan, P. A., Nejatbakhsh, A., Gnanasekaran, H., ... & Goard, M. J. (2023). Modular organization of cortical population activity during short-term memory. Neuron, 111(9), 1441-1458.</a>
-            </div>
-            <div class="publication-item">
-                <a href="https://doi.org/10.1016/j.celrep.2021.109721">Kapoor, V.*, Phan, P. A.*, Arandjelovic, M., Benzarti, M., Sriram, B., & Goard, M. J. (2021). Distinct contributions of functional and structural neural dynamics during learning. Cell Reports, 37(6), 109721.</a>
-            </div>
-            <div class="publication-item">
-                <a href="https://doi.org/10.1523/ENEURO.0080-20.2020">Phan, P. A., & Narayanan, R. T. (2020). A putative functional role for oligodendrocytes in mood regulation. eNeuro, 7(4), ENEURO.0080-20.2020.</a>
-            </div>
-            <div class="publication-item">
-                <a href="https://doi.org/10.1523/ENEURO.0387-19.2020">Stern, S. A., Pant, B., Phan, P. A., Chaves-Cox, K., Pendleton, C., & Alhadeff, A. L. (2020). Paraventricular hypothalamus to parabrachial nucleus circuit controls nausea and vomiting. eNeuro, 7(4), ENEURO.0387-19.2020.</a>
-            </div>
+        <img src="aboutme_pic.jpg" alt="Dr. Nora Wolcott" class="profile-image">
+        <h1>Dr. Nora Wolcott</h1>
+        
+        <div class="profile-text">
+            <p>Nora Wolcott is a PhD candidate in Molecular, Cellular, and Developmental Biology at UC Santa Barbara, where she is advised by Dr. Michael Goard. She received a B.S. in Cellular and Molecular Biology from George Washington University, where she first became interested in the genetic blueprint through her work in butterfly development with Dr. Arnaud Martin.</p>
+            
+            <p>Her interests expanded into neuroscience when Nora joined Russel Snell's lab at the University of Auckland, where she conducted Huntington's disease research using a sheep model. Before pursuing a PhD, she worked under Dr. Michael Krashes at the NIH NIDDK, where she investigated neural circuits underlying feeding behavior.</p>
+            
+            <p>In her current position, Nora is pursuing research at the intersection of systems neuroscience and women's health. Her dissertation work centers on interrogating how hormone cycles drive changes in spatial representations in the hippocampus using two-photon microscopy. Ultimately, she hopes to further our understanding of how steroid hormones shape the structural and functional architecture of the brain, and take steps towards making neuroscience accessible for and applicable to all.</p>
         </div>
     </div>
 </body>
